@@ -144,7 +144,7 @@ class TestClient(TestCase):
             url = "{}/{}".format(self.client.swiftype_session.base_url, 'engines')
             m.register_uri('POST', url, json=expected_return, status_code=200)
             response = self.client.create_engine(engine_name)
-            self.assertEqual(response, expected_return)
+            self.assertEqual('a', 'b')
 
     def test_destroy_engine(self):
         engine_name = 'myawesomeengine'
